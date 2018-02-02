@@ -16,7 +16,7 @@ h1{
 }
 h2{
     font-size:16/@ppr;
-    font-weight: 400;
+    font-weight: 600;
     padding-top:20/@ppr;
     &:after{
         content: '';
@@ -41,8 +41,8 @@ p{
     font-weight: 400;
 }
 .header{
-    // background: url('../img/bg.png') no-repeat;
-    background-size: cover;
+    background: url('../img/section-background.svg')  50% 17vh no-repeat,linear-gradient(to left top, #28a5f5, #1e87f0) 0 0 no-repeat;
+    background-size: 100%;
     // background-color: #2ea5ff;
 }
 .navbar{
@@ -53,7 +53,7 @@ p{
     transition: all .3s ease;
     border: 0;
     height: 52/@ppr;
-    background:#2ea5ff;
+    background:#ffffff;
     .logo{
         position:absolute;
         top:10/@ppr;
@@ -101,9 +101,9 @@ p{
         margin: 16.5px;
        
         &:hover{
-            background-image: linear-gradient(to top,#40c99b,#21df96);
+            // background-image: linear-gradient(to top,#40c99b,#21df96);
             box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
-            color:white;
+            // color:white;
             }
         }
     
@@ -113,11 +113,27 @@ p{
     position: relative;
     padding-top: 150/@ppr;
     height: 450/@ppr;
+    color:#ffffff;
     p{  
         display:inline-block;
         padding-top:20/@ppr;
     }
-    .weixin-btn{     
+    .weixin-btn{  
+        position:relative;
+        .wenxin-logo{
+
+            display:inline-block;
+            position: absolute;
+            top:45/@ppr;
+            z-index:98;
+            img{
+                width:15/@ppr;
+                height:15/@ppr;
+                position:relative;
+                left:8/@ppr;
+            }
+            
+        }   
          button{
             margin: 0 auto;
             margin-top:50/@ppr;
@@ -133,6 +149,7 @@ p{
             font-size: 10/@ppr;
             line-height: 12/@ppr;    
             background-color:transparent;
+            font-weight:600;
             color:#ffffff;
             img{
                 position: absolute;
@@ -151,9 +168,9 @@ p{
             }
               &:hover{
                 background-color:rgba(244,248,251,1);
-                background-image: linear-gradient(to top,#ffffff,#ffffff);
+                background-image: linear-gradient(to top,#21df96,#21df96);
                 box-shadow: 0 10px 20px 0 rgba(26,52,45,.1); 
-                color:#21df96;
+                color:#ffffff;
                 border: 1px solid #21df96;  
                 cursor: pointer;
                 img{
@@ -232,7 +249,7 @@ p{
         }
         li:hover{
             box-shadow: 0 15px 30px 0 rgba(26,52,45,.1);
-            transform: translateY(-5%);
+            transform: translateY(-2%);
             -webkit-transition: all .4s; 
             color:black;
          }
@@ -269,8 +286,9 @@ p{
 
         img{
             position: absolute;
-            width:35/@ppr;
-            height:35/@ppr;
+            width:50/@ppr;
+            height:50/@ppr;
+            border-radius:50/@ppr;
             left: 5/@ppr;
             top: 50/@ppr;
         }
@@ -288,6 +306,7 @@ p{
             bottom: 3/@ppr;
             display:inline-block;
             font-size: 10/@ppr;
+            font-weight:600;
             line-height: 12/@ppr;    
             background-color:transparent;
             margin: 20/@ppr auto;
