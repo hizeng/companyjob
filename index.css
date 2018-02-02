@@ -1,0 +1,45 @@
+html,body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper-page{
+    text-align: center;
+}
+.navbar{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    width: 100%;
+    transition: all .3s ease;
+    border: 0;
+    height: 73px;
+    background: #00B27A;
+}
+.main{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 50px;
+}
+.PG_introduce{
+    position: relative;
+    padding-top: 223px;
+    height: 520px;
+    
+}
+.PG_question{
+    position: relative;
+    margin:0 auto;
+    margin-bottom: 150px;
+    width: 580px;
+    height:180px;
+}
+.PG_question p{
+
+    display: block;
+    margin:0 auto;
+    width: 250px;
+    height: 25px;
+    text-align: left;
+
+}

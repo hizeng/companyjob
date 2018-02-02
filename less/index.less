@@ -1,0 +1,341 @@
+@charset "utf-8";
+@divide: 10;
+@pswWidth: 320;
+@ppr: @pswWidth/@divide/1rem; // 定义单位
+
+html,body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size:18/@ppr;
+    font-weight: 400;
+
+}
+h2{
+    font-size:16/@ppr;
+    font-weight: 400;
+    padding-top:20/@ppr;
+    &:after{
+        content: '';
+        width: 85px;
+        height: 3px;
+        border-radius: 4px;
+        background-color: #57db9b;
+        display: block;
+        margin: 25px auto 0;
+    }
+}
+h3{
+    font-size:14/@ppr;
+    font-weight: 400;
+    padding-top:20/@ppr;
+}
+p{
+    font-size: 14/@ppr;
+}
+.wrapper-page{
+    text-align: center;
+    font-weight: 400;
+}
+.header{
+    // background: url('../img/bg.png') no-repeat;
+    background-size: cover;
+}
+.navbar{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    width: 100%;
+    transition: all .3s ease;
+    border: 0;
+    height: 52/@ppr;
+    background: #00B27A;
+    .logo{
+        position:absolute;
+        top:10/@ppr;
+        left: 80/@ppr;
+        img{
+            width:30/@ppr;
+            height:30/@ppr;
+        }
+    }
+
+}
+@media screen and (max-width: 1000px){
+    .navbar{
+        .logo{
+             position:absolute;
+            top:10/@ppr;
+            left: 20/@ppr;
+            img{
+                width:30/@ppr;
+                height:30/@ppr;
+            }
+        }
+    }
+}
+.main{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 50/@ppr;
+    .cards{
+        display:block;
+        padding:30/@ppr;
+    }
+    .cards li{
+        position: relative;
+        text-align: center;
+        max-width: 280/@ppr;
+        height: 83/@ppr;
+        font-size:18/@ppr;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
+        border-radius:5/@ppr;
+        display: inline-block;
+        padding: 26/@ppr 30/@ppr;
+        margin: 16.5px;
+       
+        &:hover{
+            background-image: linear-gradient(to top,#40c99b,#21df96);
+            box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
+            color:white;
+            }
+        }
+    
+}
+
+.PG_introduce{
+    position: relative;
+    padding-top: 150/@ppr;
+    height: 450/@ppr;
+    p{  
+        display:inline-block;
+        padding-top:20/@ppr;
+    }
+    .weixin-btn{
+         button{
+            margin: 0 auto;
+            margin-top:50/@ppr;
+            width: 100/@ppr;
+            height:20/@ppr;
+            border-radius: 20/@ppr;    
+            text-align: center;
+            background-image: linear-gradient(to top,#40c99b,#21df96);
+            position:relative;
+            bottom: 3/@ppr;
+            font-size: 10/@ppr;
+            line-height: 12/@ppr;    
+            background-color:transparent;
+            color:#ffffff;
+            img{
+                position: absolute;
+                z-index: 99;
+                top: 20/@ppr;
+                right: 0/@ppr;
+                width: 100/@ppr;
+                max-width: none;
+                height: 100/@ppr;
+                transform: scale(0);
+                transform-origin: top right;
+                opacity: 0;
+                -webkit-transition: all .4s ease-in-out;
+                -o-transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;
+            }
+              &:hover{
+                background-color:rgba(244,248,251,1);
+                box-shadow: 0 10px 20px 0 rgba(26,52,45,.1); 
+                cursor: pointer;
+                img{
+                    transform: scale(1);
+                    opacity: 1;
+                }    
+            }
+       
+        }
+        
+    }
+    
+}
+.PG_question{
+    position: relative;
+    margin-bottom: 30/@ppr;
+    background-color: rgba(244,248,251,.6);
+    p{
+        font-weight:300;
+    }
+
+    
+}
+.PG_program{
+    margin-bottom: 30/@ppr;
+    .cards{
+        li{  
+            position: relative;
+            text-align: center;
+            max-width: 280/@ppr;
+            height: 83/@ppr;
+            font-size:18/@ppr;
+            border-radius: 2px;
+            background-color: #fff;
+            box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
+            display: inline-block;
+            padding: 50/@ppr 30/@ppr;
+            margin: 16.5px;
+       
+             img{
+                position: absolute;
+                width:35/@ppr;
+                height:35/@ppr;
+                left: 55/@ppr;
+                top: 8/@ppr;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px){
+            .PG_program{
+                .cards{
+                       li {
+                          img{
+                            position: absolute;
+                            width:30/@ppr;
+                            height:30/@ppr;
+                            left: 30/@ppr;
+                            top: 40/@ppr;
+                          }
+                    }
+                }
+            }       
+        }
+
+
+
+
+.PG_advantage{
+    margin-bottom: 30/@ppr;
+    background-color: rgba(244,248,251,.6);
+    .cards {
+        li{
+             box-shadow: 0 15px 40px 0 rgba(26,52,45,.1);
+             transition: all .4s;
+        }
+        li:hover{
+            box-shadow: 0 15px 30px 0 rgba(26,52,45,.1);
+            transform: translateY(-5%);
+            -webkit-transition: all .4s; 
+            color:black;
+         }
+     }
+    p{ 
+        display:inline-block;
+        margin:0 auto;
+    }
+
+
+}
+.PG_case{
+    margin-bottom: 30/@ppr;
+    h2{
+        padding-top:50/@ppr;
+    }   
+    p{
+        display:inline-block;
+        margin-top:20/@ppr;
+    }
+    .data-map{
+        img{
+          margin-top:20/@ppr;
+          width:300/@ppr;
+          height:300/@ppr;
+        }
+    }
+    .solution-img{
+      li{ 
+           position:relative;
+           display:inline-block;
+           padding: 50/@ppr 30/@ppr;
+            margin: 20/@ppr;
+
+        img{
+            position: absolute;
+            width:35/@ppr;
+            height:35/@ppr;
+            left: 5/@ppr;
+            top: 50/@ppr;
+        }
+      }
+    }
+
+}
+.PG_own{
+    height:280/@ppr;
+    margin-bottom: 30/@ppr;
+    padding-bottom: 10/@ppr;
+    background-color: rgba(244,248,251,.6);
+      .weixin-btn{        
+        button{
+            position:relative;
+            bottom: 3/@ppr;
+            display:inline-block;
+            font-size: 10/@ppr;
+            line-height: 12/@ppr;    
+            background-color:transparent;
+            margin: 20/@ppr auto;
+            width: 100/@ppr;
+            height:20/@ppr;
+            border-radius: 20/@ppr;    
+            text-align: center;
+            background-image: linear-gradient(to top,#40c99b,#21df96);
+            color: #ffffff;
+            img{
+                position: absolute;
+                z-index: 999;
+                top: 25/@ppr;
+                right: 0/@ppr;
+                width: 100/@ppr;
+                max-width: none;
+                height: 100/@ppr;
+                transform: scale(0);
+                transform-origin: top right;
+                opacity: 0;
+                -webkit-transition: all .4s ease-in-out;
+                -o-transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;
+            }
+            
+            &:hover{
+                cursor: pointer;
+                background-color:rgba(244,248,251,1);
+                box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
+                img{
+                    transform: scale(1);
+                    opacity: 1;
+                }    
+               
+            }
+        }
+    }
+
+}
+.footer{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
