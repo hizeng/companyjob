@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<style type="text/css">
+    #container{
+    min-width: 310px;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto
+  }
+</style>
+</head>
+
+<body>
+
+
+<div id="container"></div>
+
+</body>
+<script type="text/javascript">
+    
+Highcharts.chart('container', {
+
+    title: {
+        text: '极客学院市场流量、注册用户、注册成本变化折线图, 2014-2017'
+    },
+
+    subtitle: {
+        text: 'www.jikexueyuan.com'
+    },
+
+    yAxis: {
+        title: {
+            text: '单位（Q/*10名/元）'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2014
+        }
+    },
+
+    series: [{
+        name: '市场流量X10',
+        data: [0, 52503, 57177,59900]
+    }, {
+        name: '注册用户X10',
+        data: [0, 24064, 29742,45000]
+    },   {
+        name: '注册成本',
+        data: [0, 5948, 8105,8900]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 1000
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+</script>
+</html>

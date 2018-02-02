@@ -9,6 +9,9 @@
     <meta charset="utf-8">
     <title>首页</title>
     <script type="text/javascript" src="./js/mobilephone.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/base.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <style type="text/css">
@@ -18,8 +21,29 @@
                 max-width: inherit;
                 margin: 15px 0;  
                 height: auto;
+
             }
+            #container{
+                min-width: 300px;
+                max-width: 1000px;
+                height: 400px;
+                margin: 0 auto;
+            }
+             #container .highcharts-title{
+                font-size: 12px !important;
+                font-weight: 600;
+             }
         }
+            #container{
+                min-width: 310px;
+                max-width: 800px;
+                height: 400px;
+                margin: 25px auto
+            }
+            #container .highcharts-title{
+                /*font-size: 18px !important;*/
+                font-weight: 600;
+             }
     </style>
 </head>
 <body>
@@ -66,10 +90,9 @@
             </div>
             <div class="PG_case">
                 <h2>成功案例</h2>
-                <h3>极客学院 IT职业在线教育第1品牌 B轮2200万美金</h3>
-                <p>3年时间用户量从0到450万，市场流量／注册用户／注册成本变化曲线</p>
-                <div class="data-map">
-                    <img src="./img/data.png">
+                <h3><strong>极客学院 IT职业在线教育第1品牌 B轮2200万美金</strong></h3>
+                <h3>3年时间用户量从0到450万，【注：已隐去核心数据】</h3>
+                <div id="container">
                 </div>
                 <h2>合作伙伴 - 各行业领域第1品牌</h2>
                 <p>营销是建立在产品与服务基础之上，与消费者认同的优秀企业建立长期合作关系</p>
@@ -92,8 +115,67 @@
         
     </div>
     <div class="footer">
-            <p>备案信息</p>
+            <p>Copyright © 2013-2017 jikexueyuan.com All Rights Reserved. <br/>京ICP备11018032号 京公网安备11010802013056</p>
         </div>
+     <script type="text/javascript">
+    
+Highcharts.chart('container', {
 
+    title: {
+        text: '极客学院市场流量、注册用户、注册成本变化折线图: 2014-2017'
+    },
+
+    subtitle: {
+        text: 'www.jikexueyuan.com'
+    },
+
+    yAxis: {
+        title: {
+            text: '单位（Q/*10名/元）'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2014
+        }
+    },
+
+    series: [{
+        name: '市场流量X10',
+        data: [0, 52503, 57177,59900]
+    }, {
+        name: '注册用户X10',
+        data: [0, 24064, 29742,45000]
+    },   {
+        name: '注册成本',
+        data: [0, 5948, 8105,8900]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 1000
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+</script>
 </body>
 </html>

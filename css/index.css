@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 h1 {
   font-size: 0.5625rem;
@@ -19,7 +20,7 @@ h2:after {
   width: 85px;
   height: 3px;
   border-radius: 4px;
-  background-color: #57db9b;
+  background-color: #2ea5ff;
   display: block;
   margin: 25px auto 0;
 }
@@ -46,7 +47,7 @@ p {
   transition: all .3s ease;
   border: 0;
   height: 1.625rem;
-  background: #00B27A;
+  background: #2ea5ff;
 }
 .navbar .logo {
   position: absolute;
@@ -71,7 +72,6 @@ p {
 .main {
   overflow-x: hidden;
   position: relative;
-  margin-bottom: 1.5625rem;
 }
 .main .cards {
   display: block;
@@ -111,8 +111,9 @@ p {
   width: 3.125rem;
   height: 0.625rem;
   border-radius: 0.625rem;
+  border: 1px solid #2ea5ff;
   text-align: center;
-  background-image: linear-gradient(to top, #40c99b, #21df96);
+  background-image: linear-gradient(to top, #2ea5ff, #2ea5ff);
   position: relative;
   bottom: 0.09375rem;
   font-size: 0.3125rem;
@@ -129,7 +130,7 @@ p {
   max-width: none;
   height: 3.125rem;
   transform: scale(0);
-  transform-origin: top right;
+  transform-origin: top center;
   opacity: 0;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -137,7 +138,10 @@ p {
 }
 .PG_introduce .weixin-btn button:hover {
   background-color: #f4f8fb;
+  background-image: linear-gradient(to top, #ffffff, #ffffff);
   box-shadow: 0 10px 20px 0 rgba(26, 52, 45, 0.1);
+  color: #21df96;
+  border: 1px solid #21df96;
   cursor: pointer;
 }
 .PG_introduce .weixin-btn button:hover img {
@@ -232,7 +236,6 @@ p {
 }
 .PG_own {
   height: 8.75rem;
-  margin-bottom: 0.9375rem;
   padding-bottom: 0.3125rem;
   background-color: rgba(244, 248, 251, 0.6);
 }
@@ -260,7 +263,7 @@ p {
   max-width: none;
   height: 3.125rem;
   transform: scale(0);
-  transform-origin: top right;
+  transform-origin: top center;
   opacity: 0;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -274,4 +277,17 @@ p {
 .PG_own .weixin-btn button:hover img {
   transform: scale(1);
   opacity: 1;
+}
+.footer {
+  width: 100%;
+  height: 1.875rem;
+  background-image: linear-gradient(0deg, #546E7A 0%, #37474F 100%);
+  color: #ffffff;
+  text-align: center;
+}
+.footer p {
+  font-size: 0.25rem;
+  line-height: 2;
+  font-weight: 300;
+  padding-top: 0.40625rem;
 }
