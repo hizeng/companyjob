@@ -25,7 +25,6 @@ h2{
         width: 85px;
         height: 3px;
         border-radius: 4px;
-        // background-color:#2ea5ff;
         display: block;
         margin: 25px auto 0;
     }
@@ -36,9 +35,6 @@ h3{
     padding-top:10/@ppr;
     color:rgba(51,77,122,.85);
 }
-// p{
-//     font-size: 14/@ppr;
-// }
 .wrapper-page{
     position:relative;
     text-align: center;
@@ -86,28 +82,28 @@ h3{
     overflow-x: hidden;
     position: relative;
     
-    .cards{
-        display:block;
-        padding:30/@ppr;
-    }
-    .cards li{
-        position: relative;
-        text-align: center;
-        max-width: 280/@ppr;
-        height: 83/@ppr;
-        font-size:18/@ppr;
-        border-radius: 2px;
-        background-color: #fff;
-        box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
-        border-radius:5/@ppr;
-        display: inline-block;
+    // .cards{
+    //     display:block;
+    //     padding:30/@ppr;
+    // }
+    // .cards li{
+    //     position: relative;
+    //     text-align: center;
+    //     max-width: 280/@ppr;
+    //     height: 83/@ppr;
+    //     font-size:18/@ppr;
+    //     border-radius: 2px;
+    //     background-color: #fff;
+    //     box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
+    //     border-radius:5/@ppr;
+    //     display: inline-block;
   
        
-        &:hover{          
-            box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
+    //     &:hover{          
+    //         box-shadow: 0 0 20px 0 rgba(26,52,45,.1);
           
-            }
-        }
+    //         }
+    //     }
     
 }
 
@@ -145,7 +141,6 @@ h3{
             border: 1px solid #2ea5ff;  
             text-align: center;
             background-image: linear-gradient(to top,#2ea5ff,#2ea5ff);
-            // background-color:#2ea5ff;
             position:relative;
             bottom: 3/@ppr;
             font-size: 10/@ppr;
@@ -183,19 +178,22 @@ h3{
         }      
     }    
 }
+@media screen and (max-width: 1000px){
+    .PG_introduce{
+        height: 400/@ppr;
+    }
+}
 .PG_question{
     position: relative;
     margin:30/@ppr auto 0 auto;
     width:580/@ppr;
     height:200/@ppr;
-    // background-color:pink;
    .question-boxs{
         display:flex;
         .question-item{
             width:33.33%;
             padding-left: 1.5%;
             padding-right: 1.5%;
-            // background-color:yellow;
             .question-title{
                 font-size:12/@ppr;
                 font-weight:400;
@@ -238,7 +236,7 @@ h3{
     position: relative;
     margin:30/@ppr auto;
     width:100%;
-    height:200/@ppr;
+    height:250/@ppr;
    .question-boxs{
         display:block;
         .question-item{           
@@ -325,11 +323,9 @@ h3{
 
 
                 }
-
-                
-                // color:#ffffff;
+              
             }
-            // background-color:yellow;
+            
             .program-title{
                 position:absolute;
                 font-size:12/@ppr;
@@ -339,8 +335,6 @@ h3{
                 padding:20%;
                 bottom:0;
                 color:#ffffff;
-                // margin-top:130/@ppr;
-                // margin-bottom:10/@ppr;
                 visibility: inherit; 
                 opacity: 1;
                 -webkit-font-smoothing: antialiased;
@@ -350,7 +344,6 @@ h3{
             .program-text{
                 position:absolute;
                 bottom:10/@ppr;
-                // padding:10%;
                 width:180/@ppr;
                 text-align:center;
                 font-size:8/@ppr;
@@ -370,7 +363,37 @@ h3{
         }
     }
 }
+@media screen and (max-width: 1000px){
+    .PG_program{
+        width:100%;
+        height:auto;
+        margin-top:50/@ppr;
+        margin-bottom:50/@ppr;
+        h2{
+            border:none;
+            box-shadow:none;
+            margin-bottom:5/@ppr;
 
+        }
+        .program-boxs{
+            display:block;
+            .program-item{
+                width:100%;
+                img{
+                    width:100%;
+                }
+                .program-title{
+                    padding:12%;
+                    left:60/@ppr;
+                }
+                .program-text{
+                    left:75/@ppr;
+                }
+            }
+        }
+
+    }
+}
 
 
 .PG_advantage{
@@ -417,13 +440,7 @@ h3{
             ul{
                 margin-left:40/@ppr;
                 margin-top:40/@ppr;
-                // width:180/@ppr; 
-                // height:200/@ppr;
-
-               // position:relative;
-               // left:30/@ppr;
-               // top:20/@ppr;
-               // text-align:center;
+               
                 li{ 
                     
                     padding-bottom:10/@ppr;
@@ -433,11 +450,11 @@ h3{
                     font-size:10/@ppr;
                     line-height:1.2;  
                     background:url('../img/check.svg') left top no-repeat;                 
-                    // background-color:#ffffff;
+                    
                     &:hover{
                         p{
                             transform: translateX(10/@ppr);
-                            // transform: scale(1.1);
+                           
 
                         }
                     }
@@ -462,10 +479,37 @@ h3{
         }
         
     }
-
-
-
 }
+ @media screen and (max-width: 1000px){
+        .PG_advantage{
+            width:100%;
+            height:auto;
+            margin:0 auto;
+            h2{
+               height:50/@ppr;
+            }
+            .advantage-box{
+                display:block;
+                .team{
+                    width:80%;
+                    margin:0 auto;
+                    margin-left:30/@ppr;
+                    ul{ 
+                        margin-top:10/@ppr;
+                        padding-top:30/@ppr;
+                        li{
+                            padding-left:30/@ppr;
+                            line-height:1.8;
+                            p{
+                                font-size:12/@ppr;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 .PG_case{
     margin-bottom: 30/@ppr;
     h2{
@@ -532,9 +576,9 @@ h3{
                 z-index: 999;
                 top: 25/@ppr;
                 right: 0/@ppr;
-                width: 100/@ppr;
+                width: 80/@ppr;
                 max-width: none;
-                height: 100/@ppr;
+                height: 80/@ppr;
                 transform: scale(0);
                 transform-origin: top center;
                 opacity: 0;
@@ -557,6 +601,22 @@ h3{
     }
 
 }
+@media screen and (max-width: 1000px){
+    .PG_own{
+       h2{
+            height:50/@ppr;
+       }
+       .weixin-btn{
+            button{
+                img{
+                    width:50/@ppr;
+                    height:50/@ppr;
+                    right:20/@ppr;
+                }
+            }
+        }
+    }
+}
 .footer{
     position:absolute;
     bottom:0;
@@ -573,6 +633,14 @@ h3{
 
     }
 
+}
+@media screen and (max-width: 1000px){
+    .footer{
+        height:auto;
+        p{
+            padding-top:5/@ppr;
+        }
+    }
 }
 
 
