@@ -36,12 +36,11 @@ h3 {
   font-weight: 400;
 }
 .header {
-  background: url('../img/section-background.svg') 50% 17vh no-repeat, linear-gradient(to left top, #28a5f5, #1e87f0) 0 0 no-repeat;
-  background-size: 100%;
+  position: relative;
 }
-.navbar {
+.header .navbar {
   position: fixed;
-  z-index: 99999;
+  z-index: 999;
   top: 0;
   width: 100%;
   transition: all .3s ease;
@@ -49,56 +48,97 @@ h3 {
   height: 1.40625rem;
   background: #ffffff;
 }
-.navbar .logo {
+.header .navbar .logo {
   position: absolute;
   top: 0.25rem;
   left: 1.5625rem;
 }
-.navbar .logo img {
+.header .navbar .logo img {
   width: 0.9375rem;
   height: 0.9375rem;
 }
 @media screen and (max-width: 1000px) {
-  .navbar .logo {
+  .header .navbar .logo {
     position: absolute;
     top: 0.3125rem;
     left: 0.625rem;
   }
-  .navbar .logo img {
+  .header .navbar .logo img {
     width: 0.9375rem;
     height: 0.9375rem;
   }
 }
-.main {
-  overflow-x: hidden;
+.header .PG_introduce {
   position: relative;
+  height: 9.375rem;
+  overflow: hidden;
 }
-.PG_introduce {
-  position: relative;
-  padding-top: 4.6875rem;
-  height: 14.0625rem;
+.header .PG_introduce .banner-box {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 1.40625rem;
+  -webkit-transition: all 0.8s ease-in 0s;
+  transition: all 0.8s ease-in 0s;
+  height: 9.375rem;
+  background: linear-gradient(223.56deg, #6CECA2 0, #005EFF 100%);
   color: #ffffff;
 }
-.PG_introduce p {
-  display: inline-block;
-  padding-top: 0.625rem;
+.header .PG_introduce .banner-box .introduce-container {
+  margin: auto;
+  width: 21.25rem;
+  height: 9.375rem;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-.PG_introduce .weixin-btn {
+.header .PG_introduce .banner-box .introduce-container .left-title {
+  z-index: 4;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-box-align: start;
+}
+.header .PG_introduce .banner-box .introduce-container .left-title h1 {
+  font-size: 0.625rem;
+}
+.header .PG_introduce .banner-box .introduce-container .left-title p {
+  display: inline-block;
+  padding-top: 0.15625rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.header .PG_introduce .banner-box .introduce-container .left-title .weixin-btn {
   position: relative;
 }
-.PG_introduce .weixin-btn .wenxin-logo {
+.header .PG_introduce .banner-box .introduce-container .left-title .weixin-btn .wenxin-logo {
   display: inline-block;
   position: absolute;
   top: 1.40625rem;
   z-index: 98;
 }
-.PG_introduce .weixin-btn .wenxin-logo img {
+.header .PG_introduce .banner-box .introduce-container .left-title .weixin-btn .wenxin-logo img {
   width: 0.46875rem;
   height: 0.46875rem;
   position: relative;
   left: 0.25rem;
 }
-.PG_introduce .weixin-btn button {
+.header .PG_introduce .banner-box .introduce-container .left-title .weixin-btn button {
   margin: 0 auto;
   margin-top: 1.5625rem;
   width: 3.125rem;
@@ -115,7 +155,7 @@ h3 {
   font-weight: 600;
   color: #ffffff;
 }
-.PG_introduce .weixin-btn button img {
+.header .PG_introduce .banner-box .introduce-container .left-title .weixin-btn button img {
   position: absolute;
   z-index: 99;
   top: 0.625rem;
@@ -130,7 +170,7 @@ h3 {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.PG_introduce .weixin-btn button:hover {
+.header .PG_introduce .banner-box .introduce-container .left-title .weixin-btn button:hover {
   background-color: #f4f8fb;
   background-image: linear-gradient(to top, #21df96, #21df96);
   box-shadow: 0 10px 20px 0 rgba(26, 52, 45, 0.1);
@@ -138,36 +178,167 @@ h3 {
   border: 1px solid #21df96;
   cursor: pointer;
 }
-.PG_introduce .weixin-btn button:hover img {
+.header .PG_introduce .banner-box .introduce-container .left-title .weixin-btn button:hover img {
   transform: scale(1);
   opacity: 1;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg {
+  z-index: 4;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .small-circle {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 35%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 35%;
+  flex: 0 0 35%;
+  position: relative;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .small-circle .circle {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 100%;
+  position: absolute;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .small-circle .circle img {
+  height: auto;
+  width: 1.5625rem;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .small-circle .cir-1 {
+  left: 68%;
+  top: -8%;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .small-circle .cir-2 {
+  left: 44%;
+  top: 38%;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .small-circle .cir-3 {
+  left: 74%;
+  top: 80%;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 60%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  position: relative;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle img {
+  width: 6.03125rem;
+  height: auto;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle .circle-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transition: all 1s cubic-bezier(0, 0, 0.4, 0.99);
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle .anim-bg-circle {
+  z-index: -1;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle .anim-bg-circle span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle .anim-bg-circle .anim-bg-c1 {
+  background: url('../img/rabgc1.svg') center no-repeat;
+  width: 11.875rem;
+  height: 11.875rem;
+  opacity: .4;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle .anim-bg-circle .anim-bg-c2 {
+  background: url('../img/rabgc2.svg') center no-repeat;
+  width: 9.375rem;
+  height: 9.375rem;
+  opacity: .7;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .big-circle .anim-bg-circle .anim-bg-c3 {
+  background: url('../img/rabgc3.svg') center no-repeat;
+  width: 7.8125rem;
+  height: 7.8125rem;
+  opacity: .7;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+}
+.header .PG_introduce .banner-box .introduce-container .right-bg .center-box {
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header .PG_introduce .banner-box .introduce-container .space-between-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1000px) {
   .PG_introduce {
     height: 12.5rem;
   }
 }
-.PG_question {
+.main {
+  overflow-x: hidden;
+  position: relative;
+}
+.main .PG_question {
   position: relative;
   margin: 0.9375rem auto 0 auto;
-  width: 18.125rem;
+  width: 100%;
   height: 6.25rem;
+  -webkit-box-shadow: 0 1px 0 0 rgba(224, 224, 224, 0.5);
+  box-shadow: 0 1px 0 0 rgba(224, 224, 224, 0.5);
+  background: linear-gradient(0deg, #F6F9FC 0, rgba(255, 255, 255, 0) 100%);
 }
-.PG_question .question-boxs {
+.main .PG_question .question-boxs {
   display: flex;
 }
-.PG_question .question-boxs .question-item {
+.main .PG_question .question-boxs .question-item {
   width: 33.33%;
   padding-left: 1.5%;
   padding-right: 1.5%;
 }
-.PG_question .question-boxs .question-item .question-title {
+.main .PG_question .question-boxs .question-item .question-title {
   font-size: 0.375rem;
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 0.3125rem;
 }
-.PG_question .question-boxs .question-item .question-title i:before {
+.main .PG_question .question-boxs .question-item .question-title i:before {
   content: "";
   position: absolute;
   top: 40%;
@@ -176,7 +347,7 @@ h3 {
   height: 1.5625rem;
   left: 33%;
 }
-.PG_question .question-boxs .question-item .question-title i:after {
+.main .PG_question .question-boxs .question-item .question-title i:after {
   content: "";
   position: absolute;
   top: 40%;
@@ -185,65 +356,65 @@ h3 {
   height: 1.5625rem;
   right: 33%;
 }
-.PG_question .question-boxs .question-item .question-text {
+.main .PG_question .question-boxs .question-item .question-text {
   text-align: left;
   font-size: 0.28125rem;
   font-weight: 9.375rem;
   color: #90a1b8;
 }
 @media screen and (max-width: 1000px) {
-  .PG_question {
+  .main .PG_question {
     position: relative;
     margin: 0.9375rem auto;
     width: 100%;
     height: 7.8125rem;
   }
-  .PG_question .question-boxs {
+  .main .PG_question .question-boxs {
     display: block;
   }
-  .PG_question .question-boxs .question-item {
+  .main .PG_question .question-boxs .question-item {
     width: 100%;
     padding-left: 1.5%;
     padding-right: 1.5%;
     margin-top: 0.3125rem;
   }
-  .PG_question .question-boxs .question-item .question-title {
+  .main .PG_question .question-boxs .question-item .question-title {
     font-size: 0.3125rem;
     font-weight: 400;
     line-height: 1.4;
     margin-bottom: 0.3125rem;
   }
-  .PG_question .question-boxs .question-item .question-title i:before {
+  .main .PG_question .question-boxs .question-item .question-title i:before {
     display: none;
   }
-  .PG_question .question-boxs .question-item .question-title i:after {
+  .main .PG_question .question-boxs .question-item .question-title i:after {
     display: none;
   }
-  .PG_question .question-boxs .question-item .question-text {
+  .main .PG_question .question-boxs .question-item .question-text {
     text-align: center;
     font-size: 0.25rem;
     font-weight: 9.375rem;
     color: #90a1b8;
   }
 }
-.PG_program {
+.main .PG_program {
   position: relative;
   margin: 0.9375rem auto 0 auto;
   width: 18.125rem;
   height: 9.375rem;
 }
-.PG_program h2 {
+.main .PG_program h2 {
   margin-bottom: 0.9375rem;
   border: 1px solid #ccc;
   border-radius: 0.15625rem;
   box-shadow: 0 0 20px 0 rgba(26, 52, 45, 0.1);
 }
-.PG_program .program-boxs {
+.main .PG_program .program-boxs {
   position: relative;
   display: flex;
   box-shadow: 0 15px 20px 0 rgba(26, 52, 45, 0.1);
 }
-.PG_program .program-boxs .program-item {
+.main .PG_program .program-boxs .program-item {
   position: relative;
   width: 33.33%;
   height: 6.25rem;
@@ -253,28 +424,28 @@ h3 {
   overflow: hidden;
   padding: 0;
 }
-.PG_program .program-boxs .program-item img {
+.main .PG_program .program-boxs .program-item img {
   display: block;
   position: absolute;
   height: 6.25rem;
   object-fit: cover;
   transition: all 2s;
 }
-.PG_program .program-boxs .program-item:hover .program-title {
+.main .PG_program .program-boxs .program-item:hover .program-title {
   transform: translateY(-10px);
 }
-.PG_program .program-boxs .program-item:hover .program-text {
+.main .PG_program .program-boxs .program-item:hover .program-text {
   transform: translateY(-10px);
 }
-.PG_program .program-boxs .program-item:hover .cover-bg {
+.main .PG_program .program-boxs .program-item:hover .cover-bg {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #325cc7 100%);
   background-repeat: repeat-x;
   opacity: 0.8;
 }
-.PG_program .program-boxs .program-item:hover img {
+.main .PG_program .program-boxs .program-item:hover img {
   transform: scale(1.1);
 }
-.PG_program .program-boxs .program-item .program-title {
+.main .PG_program .program-boxs .program-item .program-title {
   position: absolute;
   font-size: 0.375rem;
   font-weight: 700;
@@ -288,7 +459,7 @@ h3 {
   -webkit-font-smoothing: antialiased;
   transition: all 0.5s;
 }
-.PG_program .program-boxs .program-item .program-text {
+.main .PG_program .program-boxs .program-item .program-text {
   position: absolute;
   bottom: 0.3125rem;
   width: 5.625rem;
@@ -299,7 +470,7 @@ h3 {
   -webkit-font-smoothing: antialiased;
   transition: all 0.5s;
 }
-.PG_program .program-boxs .program-item .cover-bg {
+.main .PG_program .program-boxs .program-item .cover-bg {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -307,47 +478,49 @@ h3 {
   background-repeat: repeat-x;
 }
 @media screen and (max-width: 1000px) {
-  .PG_program {
+  .main .PG_program {
     width: 100%;
     height: auto;
     margin-top: 1.5625rem;
     margin-bottom: 1.5625rem;
   }
-  .PG_program h2 {
+  .main .PG_program h2 {
     border: none;
     box-shadow: none;
     margin-bottom: 0.15625rem;
   }
-  .PG_program .program-boxs {
+  .main .PG_program .program-boxs {
     display: block;
   }
-  .PG_program .program-boxs .program-item {
+  .main .PG_program .program-boxs .program-item {
     width: 100%;
   }
-  .PG_program .program-boxs .program-item img {
+  .main .PG_program .program-boxs .program-item img {
     width: 100%;
   }
-  .PG_program .program-boxs .program-item .program-title {
+  .main .PG_program .program-boxs .program-item .program-title {
     padding: 12%;
     left: 1.875rem;
   }
-  .PG_program .program-boxs .program-item .program-text {
+  .main .PG_program .program-boxs .program-item .program-text {
     left: 2.34375rem;
   }
 }
-.PG_advantage {
+.main .PG_advantage {
   position: relative;
   margin: 0.9375rem auto 0 auto;
-  background-color: rgba(244, 248, 251, 0.6);
-  width: 18.125rem;
+  background-color: #f5f5f5;
+  width: 100%;
   height: 9.375rem;
+  -webkit-box-shadow: 0 1px 0 0 rgba(224, 224, 224, 0.5);
+  box-shadow: 0 1px 0 0 rgba(224, 224, 224, 0.5);
 }
-.PG_advantage .advantage-box {
+.main .PG_advantage .advantage-box {
   margin-top: 0.3125rem;
   display: flex;
   position: relative;
 }
-.PG_advantage .advantage-box .team {
+.main .PG_advantage .advantage-box .team {
   position: relative;
   width: calc(40%);
   height: 6.25rem;
@@ -355,7 +528,7 @@ h3 {
   border-radius: 0.15625rem;
   box-shadow: 0 15px 20px 0 rgba(26, 52, 45, 0.1);
 }
-.PG_advantage .advantage-box .team .more-left {
+.main .PG_advantage .advantage-box .team .more-left {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -366,7 +539,7 @@ h3 {
   background: -webkit-linear-gradient(317.35deg, #66E4A7 0, #11BFCA 100%);
   background: linear-gradient(132.65deg, #66E4A7 0, #11BFCA 100%);
 }
-.PG_advantage .advantage-box .team .more-right {
+.main .PG_advantage .advantage-box .team .more-right {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -377,11 +550,11 @@ h3 {
   background: -webkit-linear-gradient(left, #0097FF 0, #005EFF 100%);
   background: linear-gradient(90deg, #0097FF 0, #005EFF 100%);
 }
-.PG_advantage .advantage-box .team ul {
+.main .PG_advantage .advantage-box .team ul {
   margin-left: 1.25rem;
   margin-top: 1.25rem;
 }
-.PG_advantage .advantage-box .team ul li {
+.main .PG_advantage .advantage-box .team ul li {
   padding-bottom: 0.3125rem;
   padding-left: 0.625rem;
   text-align: left;
@@ -389,76 +562,80 @@ h3 {
   line-height: 1.2;
   background: url('../img/check.svg') left top no-repeat;
 }
-.PG_advantage .advantage-box .team ul li:hover p {
+.main .PG_advantage .advantage-box .team ul li:hover p {
   transform: translateX(0.3125rem);
 }
-.PG_advantage .advantage-box .team ul li p {
+.main .PG_advantage .advantage-box .team ul li p {
   position: relative;
   top: 0.03125rem;
   color: rgba(51, 77, 122, 0.85);
   transition: all 1s;
 }
-.PG_advantage .advantage-box .team-experience {
+.main .PG_advantage .advantage-box .team-experience {
   margin-left: 0.625rem;
 }
-.PG_advantage .advantage-box .team-advantage {
+.main .PG_advantage .advantage-box .team-advantage {
   margin-left: 2.5rem;
 }
 @media screen and (max-width: 1000px) {
-  .PG_advantage {
+  .main .PG_advantage {
     width: 100%;
     height: auto;
     margin: 0 auto;
   }
-  .PG_advantage h2 {
+  .main .PG_advantage h2 {
     height: 1.5625rem;
   }
-  .PG_advantage .advantage-box {
+  .main .PG_advantage .advantage-box {
     display: block;
   }
-  .PG_advantage .advantage-box .team {
+  .main .PG_advantage .advantage-box .team {
     width: 80%;
     margin: 0 auto;
     margin-left: 0.9375rem;
   }
-  .PG_advantage .advantage-box .team ul {
+  .main .PG_advantage .advantage-box .team ul {
     margin-top: 0.3125rem;
     padding-top: 0.9375rem;
   }
-  .PG_advantage .advantage-box .team ul li {
+  .main .PG_advantage .advantage-box .team ul li {
     padding-left: 0.9375rem;
     line-height: 1.8;
   }
-  .PG_advantage .advantage-box .team ul li p {
+  .main .PG_advantage .advantage-box .team ul li p {
     font-size: 0.375rem;
   }
 }
-.PG_case {
+.main .PG_case {
   margin-bottom: 0.9375rem;
 }
-.PG_case h2 {
+.main .PG_case h2 {
   padding-top: 1.5625rem;
 }
-.PG_case h3 span {
+.main .PG_case h3 span {
   color: #21df96;
 }
-.PG_case p {
+.main .PG_case p {
   display: inline-block;
   margin-top: 0.625rem;
   color: #364962;
 }
-.PG_case .data-map img {
+.main .PG_case .case-data {
+  -webkit-box-shadow: 0 1px 0 0 rgba(224, 224, 224, 0.5);
+  box-shadow: 0 1px 0 0 rgba(224, 224, 224, 0.5);
+}
+.main .PG_case .data-map img {
   margin-top: 0.625rem;
   width: 9.375rem;
   height: 9.375rem;
 }
-.PG_case .solution-img li {
+.main .PG_case .solution-img li {
   position: relative;
   display: inline-block;
   padding: 1.5625rem 0.9375rem;
   margin: 0.625rem;
 }
-.PG_case .solution-img li img {
+.main .PG_case .solution-img li img {
   position: absolute;
   width: 1.5625rem;
   height: 1.5625rem;
@@ -466,12 +643,27 @@ h3 {
   left: 0.15625rem;
   top: 1.5625rem;
 }
-.PG_own {
+.main .PG_own {
+  position: relative;
   height: 8.75rem;
   padding-bottom: 0.3125rem;
-  background-color: rgba(244, 248, 251, 0.6);
+  background-color: #f5f5f5;
 }
-.PG_own .weixin-btn button {
+.main .PG_own .own-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: url('../img/own-bg.jpg') top center no-repeat #f7f8fa;
+  background-size: cover;
+}
+.main .PG_own .own-text {
+  position: relative;
+  z-index: 2;
+}
+.main .PG_own .own-text .weixin-btn button {
   position: relative;
   bottom: 0.09375rem;
   display: inline-block;
@@ -487,7 +679,7 @@ h3 {
   background-image: linear-gradient(to top, #40c99b, #21df96);
   color: #ffffff;
 }
-.PG_own .weixin-btn button img {
+.main .PG_own .own-text .weixin-btn button img {
   position: absolute;
   z-index: 999;
   top: 0.78125rem;
@@ -502,20 +694,20 @@ h3 {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.PG_own .weixin-btn button:hover {
+.main .PG_own .own-text .weixin-btn button:hover {
   cursor: pointer;
   background-color: #f4f8fb;
   box-shadow: 0 0 20px 0 rgba(26, 52, 45, 0.1);
 }
-.PG_own .weixin-btn button:hover img {
+.main .PG_own .own-text .weixin-btn button:hover img {
   transform: scale(1);
   opacity: 1;
 }
 @media screen and (max-width: 1000px) {
-  .PG_own h2 {
+  .main .PG_own h2 {
     height: 1.5625rem;
   }
-  .PG_own .weixin-btn button img {
+  .main .PG_own .weixin-btn button img {
     width: 1.5625rem;
     height: 1.5625rem;
     right: 0.625rem;

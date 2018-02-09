@@ -40,6 +40,7 @@
             #container{
                 min-width: 310px;
                 max-width: 800px;
+                width: 100%;
                 height: 400px;
                 margin: 25px auto
             }
@@ -51,17 +52,43 @@
 <body>
     <div class="wrapper-page">
         <div class="header">
-            <nav class="navbar">
+           <!--  <nav class="navbar">
                 <a href="#" class="logo"><img src="./img/icon1.png"></a>
-            </nav>
+            </nav> -->
             <div class="PG_introduce">
-                <h1>互联网精准效果营销 - 数据趋动营销</h1>
-                <p> 让企业的每一分钱都花得更有效</p>
-                <div class="weixin-btn">
-                     <span class="wenxin-logo"><img src="./img/weixin-logo.png"></span>
-                     <button type="button">微信洽谈<img src="./img/icon1.png"></button>
-                </div>
-               
+                <banner class="banner-box">
+                    <div class="introduce-container">
+                        <div class="left-bg">
+                            <div class="mask1"><img src=""></div>
+                            <div class="mask2"><img src=""></div>
+                            <div class="mask3"><img src=""></div>                  
+                        </div>
+                        <div class="left-title">
+                            <h1>互联网精准效果营销 - 数据趋动营销</h1>
+                            <p> 让企业的每一分钱都花得更有效</p>
+                            <div class="weixin-btn">
+                                 <span class="wenxin-logo"><img src="./img/weixin-logo.png"></span>
+                                 <button type="button">微信洽谈<img src="./img/icon1.png"></button>
+                            </div>
+                        </div>
+                        <div class="right-bg space-between-box">
+                            <div class="small-circle">
+                                <div class="circle cir-1"><img src="./img/rsbgc1.svg"></div>
+                                <div class="circle cir-2"><img src="./img/rsbgc2.svg"></div>
+                                <div class="circle cir-3"><img src="./img/rsbgc3.svg"></div>
+                            </div>
+                            <div class="big-circle center-box">
+                                <img class="circle-active" src="./img/rbbg.png">
+                                <div class="anim-bg-circle">
+                                    <span class="anim-bg-c1"></span>
+                                    <span class="anim-bg-c2"></span>
+                                    <span class="anim-bg-c3"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div> 
+                </banner>            
             </div>
         </div>
         <div class="main">           
@@ -131,10 +158,13 @@
                 <h2>成功案例</h2>
                 <h3><strong><span>极客学院</span> IT职业在线教育第1品牌 B轮2200万美金<br>3年时间用户量从0到450万</strong></h3>
                 <h3></h3>
-                <div id="container">
+                <div class="case-data">
+                    <div id="container">
+                    </div>
                 </div>
-                <h2>合作伙伴 - 各行业领域第1品牌</h2>
-                <h3>营销是建立在产品与服务基础之上，与消费者认同的优秀企业建立长期合作关系</h3>
+                <div class="partner">
+                    <h2>合作伙伴 - 各行业领域第1品牌</h2>
+                    <h3>营销是建立在产品与服务基础之上，与消费者认同的优秀企业建立长期合作关系</h3>
                     <ul class="solution-img">
                         <li><img src="https://tvax4.sinaimg.cn/crop.0.0.399.399.180/69ce5d3dgy1ffu6q1cgujj20b40b4ab5.jpg"></li>
                         <li><img src="./img/reflower.jpeg"></li>
@@ -142,13 +172,17 @@
                         <li><img src="./img/fugelogo.jpg"></li>
                         <li><img src="./img/beimeilogo.jpeg"></li>
                     </ul>
+                </div>               
             </div>
-            <div class="PG_own">
-                <h2>致力于通过互联网精准营销</h2>
-                <h3>帮助企业获取有潜在购买意向、规模化、低成本的用户群体</h3>
-                <div class="weixin-btn">
-                    <button type="button"><img src="./img/icon2.png">微信洽谈</button>
-                </div>     
+            <div class="PG_own">  
+                <div class="own-text">
+                     <h2>致力于通过互联网精准营销</h2>
+                    <h3>帮助企业获取有潜在购买意向、规模化、低成本的用户群体</h3>
+                    <div class="weixin-btn">
+                        <button type="button"><img src="./img/icon2.png">微信洽谈</button>
+                    </div> 
+                </div>                     
+                <div class="own-bg"></div>    
             </div>
         </div>
         <div class="footer">
